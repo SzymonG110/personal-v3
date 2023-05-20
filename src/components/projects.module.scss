@@ -9,6 +9,18 @@
         text-align: center;
     }
 
+    .title {
+        position: relative;
+
+        img {
+            position: absolute !important;
+            z-index: -1;
+            top: -400px;
+            left: -400px;
+            rotate: 180deg;
+        }
+    }
+
     .green {
         color: #57FF86;
     }

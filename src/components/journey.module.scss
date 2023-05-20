@@ -3,6 +3,17 @@
         color: #57FF86;
     }
 
+    .title {
+        position: relative;
+
+        img {
+            position: absolute !important;
+            z-index: 0;
+            top: -400px;
+            right: -300px;
+        }
+    }
+
     h2 {
         font-size: 45px;
         font-weight: bold;
@@ -30,8 +41,9 @@
     }
 
     .skills {
-        width: calc((100vw - 30%) / 2);
+        z-index: 1;
         display: flex;
+        width: calc((100vw - 30%) / 2);
         height: 50px;
         min-height: 100px;
         padding: 10px 15px;

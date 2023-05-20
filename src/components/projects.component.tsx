@@ -2,11 +2,16 @@ import styles from './projects.module.scss'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faGithub} from '@fortawesome/free-brands-svg-icons'
 import clsx from 'clsx'
+import Image from 'next/image'
+import blob from '../../public/img/blob.png'
 
 const Projects = () => {
     return (
         <div className={styles.projects} id='projects'>
-            <h2>Projects I&lsquo;ve been<br/><span className={styles.green}>involved</span></h2>
+            <h2 className={styles.title}>
+                Projects I&lsquo;ve been<br/><span className={styles.green}>involved</span>
+                <Image src={blob} alt='blob'/>
+            </h2>
 
             <div className={styles.list}>
                 <div className={styles.project}>

@@ -7,10 +7,22 @@
     justify-content: center;
     width: 500px;
     height: 70px;
-    background: #212121;
     border-radius: 25px 25px 0 0;
+    background: #212121;
 
     .green {
         color: #57FF86;
+    }
+
+    @media screen and (max-width: 514px) {
+        left: 0;
+        width: 100vw;
+    }
+
+    @media screen and (max-height: 873px) {
+        position: relative;
+        left: 0;
+        width: 100vw;
+        border-radius: 0;
     }
 }

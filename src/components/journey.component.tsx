@@ -3,6 +3,8 @@ import clsx from 'clsx'
 import Timeline from './timeline.component'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faJs, faNodeJs} from '@fortawesome/free-brands-svg-icons'
+import Image from 'next/image'
+import blob from '../../public/img/blob.png'
 
 const events = [
     {date: new Date(2020, 6, 15), name: 'Wydarzenie 1'},
@@ -16,7 +18,10 @@ const events = [
 const Journey = () => {
     return (
         <div id='about' className={styles.journey}>
-            <h2>My <span className={styles.green}>Journey</span></h2>
+            <h2 className={styles.title}>
+                My <span className={styles.green}>Journey</span>
+                <Image src={blob} alt='blob'/>
+            </h2>
 
             <div className={styles.timeline}>
                 <Timeline events={events}/>
