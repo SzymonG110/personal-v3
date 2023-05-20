@@ -34,6 +34,7 @@
         .image {
             display: flex;
             width: 400px;
+            padding: 20px;
 
             img {
                 width: 100%;
@@ -44,6 +45,7 @@
         .data {
             display: flex;
             flex-direction: column;
+            padding: 20px;
         }
 
         .info {
