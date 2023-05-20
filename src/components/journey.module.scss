@@ -1,0 +1,83 @@
+.journey {
+    .green {
+        color: #57FF86;
+    }
+
+    h2 {
+        font-size: 45px;
+        font-weight: bold;
+        text-align: right;
+    }
+
+    .timeline {
+        overflow: hidden;
+    }
+
+    .move {
+        display: flex;
+    }
+
+    .stats {
+        font-size: 30px;
+
+        font-weight: bolder;
+        width: calc((100vw - 30%) / 2);
+        text-transform: uppercase;
+
+        .large {
+            font-size: 45px;
+        }
+    }
+
+    .skills {
+        width: calc((100vw - 30%) / 2);
+        display: flex;
+        height: 50px;
+        min-height: 100px;
+        padding: 10px 15px;
+        border-radius: 20px;
+        background: #202020;
+        gap: 10px;
+
+        svg {
+            width: 30px;
+            height: 30px;
+            color: #57FF86;
+            border-radius: 10px;
+        }
+
+        .st0 {
+            fill: #57FF86
+        }
+
+        .st1 {
+            fill: #202020
+        }
+    }
+
+    @media screen and (max-width: 879px) {
+        .stats {
+            font-size: 20px;
+
+            .large {
+                font-size: 30px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 699px) {
+        .move {
+            flex-direction: column-reverse;
+        }
+
+        .skills {
+            width: 90%;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+}

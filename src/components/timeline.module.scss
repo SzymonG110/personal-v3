@@ -1,0 +1,50 @@
+.swiper {
+    margin: 20px 0;
+
+    .timeline {
+        display: flex;
+        margin: 50px 0;
+        padding: 0;
+        list-style-type: none;
+        cursor: grab;
+        text-align: center;
+    }
+
+    .title {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        height: 35px;
+        margin-bottom: 20px;
+        padding: 0 40px;
+        text-align: center;
+    }
+
+    .timestamp {
+        font-weight: lighter;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        padding-top: 15px;
+        transition: all 200ms ease-in;
+        border-top: 4px solid #57FF86;
+    }
+
+    .title span {
+        font-weight: 600;
+    }
+
+    .timestamp span:before {
+        position: absolute;
+        top: -15px;
+        left: calc(50% - 12px);
+        width: 25px;
+        height: 25px;
+        content: '';
+        transition: all 200ms ease-in;
+        border-radius: 25px;
+        background-color: #57FF86;
+    }
+
+}
