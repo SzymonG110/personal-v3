@@ -3,7 +3,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faGithub} from '@fortawesome/free-brands-svg-icons'
 import clsx from 'clsx'
 import Image from 'next/image'
-import blob from '../../public/img/blob.png'
+import blob from '../../../public/img/blob.png'
 
 const Projects = () => {
     return (

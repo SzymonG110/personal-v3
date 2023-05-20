@@ -1,7 +1,11 @@
 import '../styles/globals.scss'
-import {Unbounded} from 'next/font/google'
+import {Open_Sans, Unbounded} from 'next/font/google'
+import {Toaster} from 'react-hot-toast'
 
 const unbounded = Unbounded({
+    subsets: ['latin']
+})
+const open_sans = Open_Sans({
     subsets: ['latin']
 })
 
@@ -30,7 +34,17 @@ export const metadata = {
 export default function RootLayout({children}: { children: React.ReactNode }) {
     return (
         <html lang="pl-PL">
-        <body className={unbounded.className}>{children}</body>
+        <body className={unbounded.className}>
+        <Toaster
+            position="top-right"
+            reverseOrder={false}
+            toastOptions={{
+                className: open_sans.className,
+                duration: 5000
+            }}
+        />
+        {children}
+        </body>
         </html>
     )
 }

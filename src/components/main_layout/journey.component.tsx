@@ -1,10 +1,10 @@
 import styles from './journey.module.scss'
 import clsx from 'clsx'
-import Timeline from './timeline.component'
+import Timeline from '../shared/timeline.component'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faJs, faNodeJs} from '@fortawesome/free-brands-svg-icons'
 import Image from 'next/image'
-import blob from '../../public/img/blob.png'
+import blob from '../../../public/img/blob.png'
 
 const events = [
     {date: new Date(2020, 6, 15), name: 'Wydarzenie 1'},
