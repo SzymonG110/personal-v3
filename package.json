@@ -27,6 +27,7 @@
     "react-hot-toast": "^2.4.1",
     "react-modal": "^3.16.1",
     "react-native-svg": "^13.9.0",
+    "react-simple-typewriter": "^5.0.1",
     "swiper": "^9.3.2",
     "typescript": "5.0.4"
   },

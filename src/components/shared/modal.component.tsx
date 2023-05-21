@@ -1,22 +1,23 @@
 'use client'
 
 import ModalComponent from 'react-modal'
+import styles from './modal.module.scss'
 
 const customStyles = {
     overlay: {
-        background: 'rgba(0, 0, 0, 0.5)',
+        background: 'rgba(0, 0, 0, 0.5)'
     },
     content: {
         top: '50%',
         left: '50%',
         right: 'auto',
         bottom: 'auto',
-        'min-height': '50%',
-        'min-width': '50%',
+        'minHeight': '50%',
+        'minWidth': '50%',
         marginRight: '-50%',
         transform: 'translate(-50%, -50%)',
         color: '#fff',
-        background: '#202020',
+        background: '#202020'
     },
 }
 
@@ -41,8 +42,9 @@ const Modal = ({modalIsOpen, setIsOpen, children}: ModalProps) => {
             onRequestClose={closeModal}
             style={customStyles}
             contentLabel='Modal'
+            className={styles.modal}
         >
-            <span onClick={closeModal}>x</span>
+            <span className={styles.close} onClick={closeModal}>x</span>
             {children}
         </ModalComponent>
     )

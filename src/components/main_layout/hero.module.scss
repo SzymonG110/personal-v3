@@ -10,22 +10,16 @@
         justify-content: center;
         margin-top: 8%;
 
+        .typing {
+            color: #57FF86;
+        }
+
         h1 {
             font-size: 78px;
             font-weight: bold;
             position: relative;
             margin-bottom: 1rem;
             text-align: center;
-
-            .typing {
-                overflow: hidden;
-                animation: typewriter 4s steps(60) 1s infinite alternate both,
-                blinkTextCursor 500ms steps(30) infinite normal;
-                text-align: left;
-                white-space: nowrap;
-                color: #57FF86;
-                border-right: 5px solid #57FF86;
-            }
 
             img {
                 position: absolute;
@@ -38,24 +32,6 @@
             display: block;
             width: 800px;
             text-align: center;
-        }
-    }
-
-    @keyframes typewriter {
-        from {
-            width: 0;
-        }
-        to {
-            width: 100%;
-        }
-    }
-
-    @keyframes blinkTextCursor {
-        from {
-            border-right-color: #57FF86;
-        }
-        to {
-            border-right-color: transparent;
         }
     }
 

@@ -22,9 +22,9 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
             maxAge: 3600 * 24 * 7
         }))
 
-        res.status(200).json({message: 'Successfully logged in'})
+        return res.status(200).json({message: 'Successfully logged in'})
     } else {
-        res.status(405).json({message: 'Method not allowed'})
+        return res.status(405).json({message: 'Method not allowed'})
     }
 }
 

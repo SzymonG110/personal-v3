@@ -1,6 +1,17 @@
+'use client'
+
 import styles from './hero.module.scss'
 import Navbar from '../shared/navbar.component'
 import Image from 'next/image'
+import {Typewriter} from 'react-simple-typewriter'
+
+const words: string[] = [
+    'Szymon',
+    'a programmer',
+    'a student',
+    'a gamer',
+    'a human'
+]
 
 const Hero = () => {
     return (
@@ -10,7 +21,7 @@ const Hero = () => {
                 <h1>
                     Hello, I&lsquo;m
                     <div className={styles.typing}>
-                        <span>Szymon</span>
+                        <Typewriter words={words} loop={true} cursor={true} cursorBlinking={true} cursorColor={'#'}/>
                     </div>
                     <Image src='/img/smile.png' alt='smile' width='100' height='100'/>
                 </h1>

@@ -1,3 +1,5 @@
+import {Prisma} from '@prisma/client'
+
 interface FetcherProps {
     url: string
     method?: string
@@ -32,4 +34,8 @@ export const login = ({login, password}: { login: string, password: string }) =>
 
 export const getProjects = () => {
     return fetcher({url: '/api/project', method: 'GET'})
+}
+
+export const addProject = (body: Prisma.ProjectCreateInput) => {
+    return fetcher({url: '/api/project', method: 'POST', body})
 }
