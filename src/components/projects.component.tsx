@@ -36,7 +36,7 @@ const Projects = () => {
                 {projects.map((project, i) => (
                     <div className={i % 2 === 0 ? styles.project : styles.projectReverse} key={i}>
                         <div className={styles.image}>
-                            <img src={project.image as string} alt='image'/>
+                            <Image src={project.image as string} alt='image'/>
                         </div>
 
                         <div className={styles.data}>
