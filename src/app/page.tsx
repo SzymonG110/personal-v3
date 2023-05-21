@@ -1,9 +1,9 @@
-import styles from '../styles/main_layout/page.module.scss'
-import Hero from '../components/main_layout/hero.component'
-import Journey from '../components/main_layout/journey.component'
-import Projects from '../components/main_layout/projects.component'
-import Contact from '../components/main_layout/contact.component'
-import Footer from '../components/main_layout/footer.component'
+import styles from '../styles/page.module.scss'
+import Hero from '../components/hero.component'
+import Journey from '../components/journey.component'
+import Projects from '../components/projects.component'
+import Contact from '../components/contact.component'
+import Footer from '../components/footer.component'
 
 const Home = () => {
     return (

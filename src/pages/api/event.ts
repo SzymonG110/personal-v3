@@ -1,13 +1,13 @@
 import type {NextApiRequest, NextApiResponse} from 'next'
-import {getAllProjects} from '../../lib/project'
+import {getAllEvents} from '../../lib/timeline'
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     if (req.method === 'GET') {
-        const projects = await getAllProjects()
+        const events = await getAllEvents()
 
         return res.status(200).json({
             message: 'Successfully fetched data',
-            projects
+            events
         })
     } else {
         return res.status(405).json({message: 'Method not allowed'})

@@ -1,7 +1,7 @@
 'use client'
 
 import styles from './hero.module.scss'
-import Navbar from '../shared/navbar.component'
+import Navbar from './navbar.component'
 import Image from 'next/image'
 import {Typewriter} from 'react-simple-typewriter'
 

@@ -10,14 +10,6 @@ datasource db {
     url      = env("DATABASE_URL")
 }
 
-model User {
-    id        String   @id @default(uuid())
-    createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
-    login     String   @unique
-    password  String
-}
-
 model Project {
     id           Int      @id @default(autoincrement())
     createdAt    DateTime @default(now())
@@ -27,4 +19,11 @@ model Project {
     technologies String[]
     image        String
     github       String?
+}
+
+model Event {
+    id        Int      @id @default(autoincrement())
+    createdAt DateTime @default(now())
+    eventDate DateTime @default(now()) @db.Date
+    name      String
 }

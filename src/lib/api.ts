@@ -28,14 +28,10 @@ const fetcher = async ({url, method = 'GET', body, json = true}: FetcherProps) =
     return json ? res.json() : res.text()
 }
 
-export const login = ({login, password}: { login: string, password: string }) => {
-    return fetcher({url: '/api/login', method: 'POST', body: {login, password}})
-}
-
 export const getProjects = () => {
     return fetcher({url: '/api/project', method: 'GET'})
 }
 
-export const addProject = (body: Prisma.ProjectCreateInput) => {
-    return fetcher({url: '/api/project', method: 'POST', body})
+export const getEvents = () => {
+    return fetcher({url: '/api/event', method: 'GET'})
 }

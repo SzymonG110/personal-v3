@@ -1,5 +1,5 @@
-import Navbar from '../components/shared/navbar.component'
-import styles from '../styles/main_layout/not-found.module.scss'
+import Navbar from '../components/navbar.component'
+import styles from '../styles/not-found.module.scss'
 
 const Error_404 = () => {
     return (

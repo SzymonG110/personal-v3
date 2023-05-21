@@ -1,21 +1,15 @@
 import styles from './journey.module.scss'
 import clsx from 'clsx'
-import Timeline from '../shared/timeline.component'
+import Timeline from './timeline.component'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faJs, faNodeJs} from '@fortawesome/free-brands-svg-icons'
+import {faJs, faNodeJs, faReact, faSass } from '@fortawesome/free-brands-svg-icons'
+import {faDatabase} from '@fortawesome/free-solid-svg-icons'
 import Image from 'next/image'
-import blob from '../../../public/img/blob.png'
-
-const events = [
-    {date: new Date(2020, 6, 15), name: 'Wydarzenie 1'},
-    {date: new Date(2021, 3, 27), name: 'Wydarzenie 2'},
-    {date: new Date(2022, 8, 5), name: 'Wydarzenie 3'},
-    {date: new Date(2023, 3, 9), name: 'Wydarzenie 4'},
-    {date: new Date(2023, 4, 15), name: 'Wydarzenie 5'},
-    {date: new Date(), name: 'Today'}
-]
+import blob from '../../public/img/blob.png'
 
 const Journey = () => {
+
+
     return (
         <div id='about' className={styles.journey}>
             <h2 className={styles.title}>
@@ -24,7 +18,7 @@ const Journey = () => {
             </h2>
 
             <div className={styles.timeline}>
-                <Timeline events={events}/>
+                <Timeline/>
             </div>
 
             <div className={styles.move}>
@@ -41,6 +35,9 @@ const Journey = () => {
                 <div className={styles.skills}>
                     <FontAwesomeIcon icon={faNodeJs}/>
                     <FontAwesomeIcon icon={faJs}/>
+                    <FontAwesomeIcon icon={faReact}/>
+                    <FontAwesomeIcon icon={faSass}/>
+                    <FontAwesomeIcon icon={faDatabase}/>
                     <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="2500"
                          height="2500">
                         <path className={styles.st0} d="M0 200V0h400v400H0"/>

@@ -46,6 +46,8 @@
         .image {
             display: flex;
             width: 400px;
+            max-height: 600px;
+
             padding: 20px;
 
             img {
@@ -69,7 +71,18 @@
 
             .icons {
                 display: flex;
+                align-items: center;
                 column-gap: 10px;
+
+                a {
+                    text-decoration: none;
+                    z-index: 1;
+                    color: #57FF86;
+                }
+
+                a:hover {
+                    color: white;
+                }
 
                 svg {
                     width: 50px;
@@ -156,5 +169,13 @@
                 text-align: center;
             }
         }
+    }
+
+    .st0 {
+        fill: #57FF86
+    }
+
+    .st1 {
+        fill: #202020
     }
 }
