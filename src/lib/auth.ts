@@ -21,14 +21,21 @@ export const createJWT = (user: Prisma.UserCreateInput) => {
 }
 
 export const validateJWT = async (jwt: string | Uint8Array) => {
-    const {payload} = await jwtVerify(jwt, new TextEncoder().encode(process.env.JWT_SECRET))
-    return payload.payload as any
+    try {
+        const {payload} = await jwtVerify(jwt, new TextEncoder().encode(process.env.JWT_SECRET), {
+            algorithms: ['HS256']
+        })
+        return payload.payload as { id: string, login: string }
+    } catch (e) {
+        return false
+    }
 }
 
-export const getUserFromCookie = async (cookies: any) => {
-    const jwt = cookies.get(process.env.COOKIE_NAME)
-    const {id} = await validateJWT(jwt.value)
+export const getUserFromCookie = async (jwt: string) => {
+    const validate = await validateJWT(jwt)
+    if (!validate) return false
+
     return await db.user.findUnique({
-        where: {id}
+        where: {id: validate.id}
     })
 }

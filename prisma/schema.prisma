@@ -26,6 +26,8 @@ model Project {
     name         String
     description  String
     technologies String[]
+    image        String
+    github       String
 
     ownerId String
     owner   User   @relation(fields: [ownerId], references: [id])

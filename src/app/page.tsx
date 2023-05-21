@@ -1,4 +1,4 @@
-import styles from '../styles/page.module.scss'
+import styles from '../styles/main_layout/page.module.scss'
 import Hero from '../components/main_layout/hero.component'
 import Journey from '../components/main_layout/journey.component'
 import Projects from '../components/main_layout/projects.component'

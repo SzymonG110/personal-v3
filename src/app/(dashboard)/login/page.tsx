@@ -1,4 +1,4 @@
-import Login from '../../components/panel_layout/login.component'
+import Login from '../../../components/panel_layout/login.component'
 
 const Home = () => {
     return (

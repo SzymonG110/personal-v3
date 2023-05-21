@@ -1,5 +1,5 @@
 import styles from './hero.module.scss'
-import Navbar from './navbar.component'
+import Navbar from '../shared/navbar.component'
 import Image from 'next/image'
 
 const Hero = () => {

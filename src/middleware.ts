@@ -9,25 +9,29 @@ const verifyJWT = async (jwt: string) => {
 export default async function middleware(req: NextRequest, res: NextResponse) {
     const {pathname} = req.nextUrl
 
-    if (pathname.includes('dashboard') || pathname.includes('panel')) {
+    if (pathname.startsWith('/dashboard') || pathname.startsWith('/login')) {
         const jwt = req.cookies.get(process.env.COOKIE_NAME as string)
 
         if (!jwt) {
-            req.nextUrl.pathname = '/panel'
+            if (pathname.startsWith('/login'))
+                return NextResponse.next()
+            req.nextUrl.pathname = '/login'
             return NextResponse.redirect(req.nextUrl)
         }
 
         try {
             await verifyJWT(jwt.value)
 
-            if (pathname === '/panel') {
-                req.nextUrl.pathname = '/panel/dashboard'
+            if (pathname === '/login') {
+                req.nextUrl.pathname = '/dashboard'
                 return NextResponse.redirect(req.nextUrl)
             }
 
             return NextResponse.next()
         } catch (e) {
-            req.nextUrl.pathname = "/panel"
+            if (pathname.startsWith('/login'))
+                return NextResponse.next()
+            req.nextUrl.pathname = "/login"
             return NextResponse.redirect(req.nextUrl)
         }
     }

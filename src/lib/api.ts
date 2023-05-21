@@ -18,7 +18,7 @@ const fetcher = async ({url, method = 'GET', body, json = true}: FetcherProps) =
     if (!res.ok) {
         return {
             error: true,
-            status: res.status || 12312,
+            status: res.status,
             message: (await res.json()).message
         }
     }
@@ -28,4 +28,8 @@ const fetcher = async ({url, method = 'GET', body, json = true}: FetcherProps) =
 
 export const login = ({login, password}: { login: string, password: string }) => {
     return fetcher({url: '/api/login', method: 'POST', body: {login, password}})
+}
+
+export const getProjects = () => {
+    return fetcher({url: '/api/project', method: 'GET'})
 }

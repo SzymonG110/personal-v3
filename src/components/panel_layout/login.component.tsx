@@ -1,41 +1,39 @@
 'use client'
 
-import {login} from '../../lib/api'
 import {useRouter} from 'next/navigation'
-import {useState} from 'react'
+import {useRef} from 'react'
 import toast from 'react-hot-toast'
-
-const initialState = {login: '', password: ''}
+import {login} from '../../lib/api'
 
 const Login = () => {
     const router = useRouter()
-    const [formState, setFormState] = useState(initialState)
+    const loginRef = useRef<HTMLInputElement>(null)
+    const passwordRef = useRef<HTMLInputElement>(null)
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
 
-        if (formState.login === '' || formState.password === '')
+        const loginData = loginRef.current?.value
+        const passwordData = passwordRef.current?.value
+
+        if (!loginData || !passwordData || loginData === '' || passwordData === '')
             return toast.error('Please fill all fields')
 
-        const res = await login(formState)
+        const res = await login({login: loginData, password: passwordData})
 
         if (res.error)
             return toast.error(res.message)
-
-        setFormState(initialState)
-        await router.push('/panel/dashboard')
+        await router.push('/dashboard')
     }
 
     return (
-        <div>
+        <>
             <form onSubmit={handleSubmit}>
-                Login: <input type="text" name="login" required
-                              onChange={(e) => setFormState((s) => ({...s, login: e.target.value}))}/> <br/>
-                Password: <input type="password" name="password" required
-                                 onChange={(e) => setFormState((s) => ({...s, password: e.target.value}))}/> <br/>
+                Login: <input type="text" name="login" required ref={loginRef}/> <br/>
+                Password: <input type="password" name="password" required ref={passwordRef}/> <br/>
                 <input type="submit" value="Login"/>
             </form>
-        </div>
+        </>
     )
 }
 

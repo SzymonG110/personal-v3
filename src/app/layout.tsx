@@ -10,7 +10,7 @@ const open_sans = Open_Sans({
 })
 
 export const metadata = {
-    title: 'Szymon Górnikowski - Portfolio',
+    title: 'Portfolio - Szymon Górnikowski',
     description: 'My best projects, skills and contact information.',
     authors: {
         name: 'Szymon Górnikowski',
@@ -31,7 +31,7 @@ export const metadata = {
     ]
 }
 
-export default function RootLayout({children}: { children: React.ReactNode }) {
+const RootLayout = ({children}: { children: React.ReactNode }) => {
     return (
         <html lang="pl-PL">
         <body className={unbounded.className}>
@@ -48,3 +48,5 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
         </html>
     )
 }
+
+export default RootLayout
