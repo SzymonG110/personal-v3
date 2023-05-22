@@ -9,7 +9,6 @@ import gsap from 'gsap'
 import { useEffect } from 'react'
 
 const Navbar = () => {
-	const navbar = document.getElementById('navbar__button')
 	const tl = gsap.timeline()
 	let hamburger = faBars
 
