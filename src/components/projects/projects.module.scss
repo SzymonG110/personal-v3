@@ -14,7 +14,6 @@
 
 		img {
 			position: absolute !important;
-			z-index: -1;
 			top: -400px;
 			left: -400px;
 			rotate: 180deg;
@@ -28,6 +27,7 @@
 	.list {
 		display: block;
 		margin: 0 auto;
+		z-index: 1;
 
 		.project {
 			display: flex;
