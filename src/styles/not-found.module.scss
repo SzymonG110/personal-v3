@@ -1,22 +1,22 @@
 .place {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 85vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 85vh;
 
-    .box {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-        height: 300px;
-        width: 50%;
-        border-radius: 70px 20px;
-        background: #202020;
-        text-align: center;
-    }
+	.box {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		height: 300px;
+		width: 50%;
+		border-radius: 70px 20px;
+		background: #202020;
+		text-align: center;
+	}
 
-    .green {
-        color: #57FF86;
-    }
+	.green {
+		color: #57ff86;
+	}
 }

@@ -1,20 +1,20 @@
 .container {
-    width: 70%;
-    margin: 0 auto;
+	width: 70%;
+	margin: 0 auto;
 }
 
 .end {
-    position: relative;
-    z-index: -1;
-    min-height: 50vh;
-    margin-top: -40px;
-    padding-top: 90px;
-    background: url('../../public/img/contactbg.png') center no-repeat;
-    background-size: cover;
+	position: relative;
+	z-index: -1;
+	min-height: 50vh;
+	margin-top: -40px;
+	padding-top: 90px;
+	background: url('../../public/img/contactbg.png') center no-repeat;
+	background-size: cover;
 }
 
 @media screen and (max-width: 1299px) {
-    .container {
-        width: 90%;
-    }
+	.container {
+		width: 90%;
+	}
 }
