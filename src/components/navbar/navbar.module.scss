@@ -4,71 +4,106 @@
 	justify-content: space-around;
 	min-width: 100vw;
 	height: 8vh;
-	padding: 8px 0;
-
-	.logo {
-		display: flex;
-		align-items: center;
-
-		img {
-			width: 60px;
-			height: 60px;
-		}
+	padding: 8px 10px;
+	* {
+		overflow: hidden;
 	}
 
-	.links {
-		display: flex;
-		align-items: center;
-		gap: 50px;
-
-		a {
-			font-size: 18px;
-			font-weight: bold;
-			text-decoration: none;
-			color: white;
-		}
-
-		a:hover {
-			color: #57ff86;
-		}
+	.hamburger {
+		display: none;
+		cursor: pointer;
 	}
 
-	.icons {
+	.content {
 		display: flex;
-		align-items: center;
-		gap: 20px;
-
-		a {
-			text-decoration: none;
-			color: white;
-		}
-
-		a:hover {
-			color: #57ff86;
-		}
-
-		svg {
-			height: 40px;
-		}
-	}
-
-	@media screen and (max-width: 650px) {
-		.icons {
-			display: none;
-		}
+		justify-content: space-around;
+		width: 100vw;
 
 		.logo {
-			display: none;
-		}
-	}
+			display: flex;
+			align-items: center;
 
-	@media screen and (max-width: 440px) {
+			img {
+				width: 60px;
+				height: 60px;
+			}
+		}
+
 		.links {
 			display: flex;
 			align-items: center;
+			gap: 100px;
+
+			a {
+				font-size: 18px;
+				font-weight: lighter;
+				text-decoration: none;
+				color: white;
+			}
+
+			a:hover {
+				color: #57ff86;
+			}
+		}
+
+		.icons {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+
+			a {
+				text-decoration: none;
+				color: white;
+			}
+
+			a:hover {
+				color: #57ff86;
+			}
+
+			svg {
+				height: 40px;
+			}
+		}
+	}
+
+	@media screen and (max-width: 799px) {
+		& {
 			justify-content: center;
-			margin: 0 20px;
-			text-align: center;
+			gap: 70vw;
+		}
+
+		.hamburger {
+			position: absolute;
+			z-index: 11;
+			right: 20px;
+			display: block;
+			flex-direction: column;
+
+			svg {
+				height: 40px;
+			}
+		}
+
+		.content {
+			position: absolute;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			display: none;
+			align-items: center;
+			flex-direction: column;
+			justify-content: space-around;
+			width: 100vw;
+			height: 100vh;
+			background-color: #1f1f1f;
+			gap: 50px;
+		}
+
+		.links {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			gap: 50px;
 		}
 	}
 }

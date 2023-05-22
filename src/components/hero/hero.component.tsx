@@ -29,7 +29,13 @@ const Hero = () => {
 							cursorColor={'#'}
 						/>
 					</div>
-					<Image src="/img/smile.png" alt="smile" width="100" height="100" />
+					<Image
+						src="/img/smile.png"
+						alt="smile"
+						width="100"
+						height="100"
+						className={styles.smile}
+					/>
 				</h1>
 				<span className={styles.desc}>
 					I&lsquo;m a {new Date().getFullYear() - 2007}-year-old programmer

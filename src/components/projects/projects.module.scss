@@ -25,9 +25,9 @@
 	}
 
 	.list {
+		z-index: 1;
 		display: block;
 		margin: 0 auto;
-		z-index: 1;
 
 		.project {
 			display: flex;
@@ -76,16 +76,20 @@
 
 				a {
 					text-decoration: none;
-					z-index: 1;
-					color: #57ff86;
+					color: white;
 				}
 
 				a:hover {
-					color: white;
+					color: #57ff86;
 				}
 
 				svg {
 					width: 50px;
+					color: white;
+				}
+
+				svg:hover {
+					color: #57ff86;
 				}
 			}
 		}
@@ -172,6 +176,10 @@
 	}
 
 	.st0 {
+		fill: white;
+	}
+
+	.st0:hover {
 		fill: #57ff86;
 	}
 

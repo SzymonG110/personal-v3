@@ -35,7 +35,7 @@
 		}
 	}
 
-	@media screen and (max-width: 800px) {
+	@media screen and (max-width: 799px) {
 		.content {
 			.desc {
 				width: 600px;
@@ -44,7 +44,7 @@
 	}
 
 	@media screen and (max-width: 699px) {
-		img {
+		.smile {
 			display: none;
 		}
 	}
