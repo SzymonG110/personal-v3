@@ -29,6 +29,8 @@ const Navbar = () => {
 		hamburger === faBars ? (hamburger = faX) : (hamburger = faBars)
 
 		if (document.getElementById('content')?.style.display === 'flex') {
+			document.body.style.height = 'auto'
+
 			tl.to('#content', {
 				x: '-100%',
 				opacity: 0,
@@ -36,6 +38,8 @@ const Navbar = () => {
 				duration: 1,
 			})
 		} else {
+			document.body.style.height = '100vh'
+
 			tl.to('#content', {
 				x: '0%',
 				opacity: 1,
