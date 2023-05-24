@@ -7,6 +7,7 @@ import { faDiscord, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faBars, faX } from '@fortawesome/free-solid-svg-icons'
 import gsap from 'gsap'
 import { useEffect } from 'react'
+import Link from 'next/link'
 
 const Navbar = () => {
 	const tl = gsap.timeline()
@@ -14,7 +15,7 @@ const Navbar = () => {
 
 	useEffect(() => {
 		if (window.innerWidth <= 799)
-			tl.from('#content', {
+			tl.to('#content', {
 				x: '-100%',
 				opacity: 0,
 				display: 'none',
@@ -23,6 +24,8 @@ const Navbar = () => {
 	}, [])
 
 	const toggleNavbar = () => {
+		if (window.innerWidth > 799) return
+
 		hamburger === faBars ? (hamburger = faX) : (hamburger = faBars)
 
 		if (document.getElementById('content')?.style.display === 'flex') {
@@ -32,9 +35,7 @@ const Navbar = () => {
 				display: 'none',
 				duration: 1,
 			})
-			document.body.style.height = 'auto'
 		} else {
-			document.body.style.height = '100vh'
 			tl.to('#content', {
 				x: '0%',
 				opacity: 1,
@@ -58,9 +59,15 @@ const Navbar = () => {
 				</div>
 
 				<div className={styles.links}>
-					<a href="/#about">About me</a>
-					<a href="/#projects">My projects</a>
-					<a href="/#contact">Contact</a>
+					<Link href="/#about" onClick={toggleNavbar}>
+						About me
+					</Link>
+					<Link href="/#projects" onClick={toggleNavbar}>
+						My projects
+					</Link>
+					<Link href="/#contact" onClick={toggleNavbar}>
+						Contact
+					</Link>
 				</div>
 
 				<div className={styles.icons}>
@@ -76,7 +83,7 @@ const Navbar = () => {
 				</div>
 			</div>
 
-			<div className={styles.hamburger} id="navbar__button">
+			<div className={styles.hamburger}>
 				<FontAwesomeIcon
 					icon={hamburger}
 					width="40px"

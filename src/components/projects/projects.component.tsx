@@ -45,7 +45,12 @@ const Projects = () => {
 						key={i}
 					>
 						<div className={styles.image}>
-							<img src={project.image as string} alt="image" />
+							<Image
+								src={project.image as string}
+								alt="project image"
+								width={500}
+								height={200}
+							/>
 						</div>
 
 						<div className={styles.data}>
