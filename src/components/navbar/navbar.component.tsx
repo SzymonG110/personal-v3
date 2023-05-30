@@ -69,9 +69,16 @@ const Navbar = () => {
 					<Link href="/#projects" onClick={toggleNavbar}>
 						My projects
 					</Link>
-					<Link href="/#contact" onClick={toggleNavbar}>
+					<span
+						onClick={() => {
+							toggleNavbar()
+							document.getElementById('contact')?.scrollIntoView({
+								behavior: 'smooth',
+							})
+						}}
+					>
 						Contact
-					</Link>
+					</span>
 				</div>
 
 				<div className={styles.icons}>

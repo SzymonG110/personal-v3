@@ -34,14 +34,17 @@
 			align-items: center;
 			gap: 100px;
 
-			a {
+			a,
+			span {
 				font-size: 18px;
 				font-weight: lighter;
 				text-decoration: none;
 				color: white;
 			}
 
-			a:hover {
+			a:hover,
+			span:hover {
+				cursor: pointer;
 				color: #57ff86;
 			}
 		}
